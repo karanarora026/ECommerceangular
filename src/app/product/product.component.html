@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="col-sm-5">
+		<div class="product-image" id="image">
+			<img [src]="product?.image">
+		</div>
+	</div>
+	<div class="col-sm-7 product-body" >
+		<div class="product-name" id="name">	
+			{{product.name}}
+		</div>
+		<hr>
+		<div class="product-price">
+			Price: <span id="price">{{product.price}}</span>	
+		</div>
+		<br>
+		<div class="product-description" id="description">
+			{{product.description}}
+		</div>
+		<button type="button" *ngIf="!clicked" id="cartBtn" [hidden]="clicked" class="btn btn-warning btn-lg product-btn" (click)="cartAdd(product)">Add to Cart</button>
+		<div *ngIf="clicked">
+			<button type="button" id="cartBtn" class="btn btn-success btn-lg product-btn" routerLink="/cart" >Go to Cart</button>
+		<span >Items added to cart </span>
+	</div>
+
+	</div>
+</div>
+<!-- 
+<div class="suggestion-list">
+	<hr>
+	<div class="suggestion-text">Products You May Like</div>
+	
+	<div class="suggested-products" ng-repeat="i in suggestedproducts track by $index">
+		<a routerLink='selectedproduct({ category:"{{category}}", id:"{{$index}}" })' ng-if="$index<3">
+			<div class='col-sm-3 product'>
+				<img src='{{i.image}}' class='suggestion-img' >
+				{{i.image}}
+				<div class='itemtxt-cards'>
+					<div class='name-itemtxt-cards'>
+						{{i.name}}
+					</div>
+				 	<div class='price-itemtxt-cards'>
+				 	 {{i.price}}
+				 	</div>
+				</div>
+			</div> 
+		</a>
+	</div>
+</div> -->

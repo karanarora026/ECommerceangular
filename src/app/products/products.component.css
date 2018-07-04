@@ -1,0 +1,42 @@
+.top-card{
+	margin:2%;
+}
+.electronics-img{
+	height: 300px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.itemtxt-cards{
+	text-align:center;
+	margin: 5%;
+}
+.advertisement{
+	    margin-top: 5%;
+	    width: 1150px;
+    height: 200px;
+
+}
+.left-bar{
+	background: rgb(248,248,248);
+	padding-left: 3%;
+}
+.left-bar ul li{
+	background-color: transparent; 
+    border: none; 
+}
+.navbar-cart{
+	padding: 2%;
+    font-size: larger;
+}
+.image-car{
+width: 1150px;
+    height: 200px;
+}
+.btn-review{
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+}

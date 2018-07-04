@@ -1,0 +1,90 @@
+.company-logo{
+	height:80px;
+	width:80px;
+}
+.navbar-fixed{
+	position:fixed;
+	top:0;
+}
+.middle-page{
+	margin-top: 7%;
+}
+.footer{
+	background:rgb(245,245,245);
+	padding-top: 50px;
+    padding-bottom: 40px;
+    width: 1440px;
+        margin-top: 100px;
+}
+ul {
+  list-style-type: none;
+}
+.footer-heading{
+	    text-decoration-line: underline;
+    font-size: 24px;
+    padding-bottom: 25px;
+}
+.fa{
+	padding-right: 30px;
+}
+img{
+	height:100%;
+	width:100%;
+}
+.cards{
+    box-shadow: 10px 10px 20px lightgrey;
+    margin-top: 5%;
+    height: 450px;
+    width: 1150px;
+}
+.heading-card{
+	font-size:150%;
+    font-family: serif;
+    margin: inherit;
+}
+.btn-card{
+	float:right;
+	margin: auto;
+}
+.top-card{
+	margin:2%;
+}
+.electronics-img{
+	height: 300px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.itemtxt-cards{
+	text-align:center;
+	margin: 5%;
+}
+.advertisement{
+	    margin-top: 5%;
+	    width: 1150px;
+    height: 200px;
+
+}
+.left-bar{
+	background: rgb(248,248,248);
+	padding-left: 3%;
+}
+.left-bar ul li{
+	background-color: transparent; 
+    border: none; 
+}
+.navbar-cart{
+	padding: 2%;
+    font-size: larger;
+}
+.image-car{
+width: 1150px;
+    height: 200px;
+}
+.btn-review{
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+}

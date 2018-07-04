@@ -1,0 +1,33 @@
+.cards{
+    box-shadow: 10px 10px 20px lightgrey;
+    margin-top: 5%;
+    height: 450px;
+    width: 1150px;
+}
+.heading-card{
+	font-size:150%;
+    font-family: serif;
+    margin: inherit;
+}
+.btn-card{
+	float:right;
+	margin: auto;
+}
+.top-card{
+	margin:2%;
+}
+.electronics-img{
+	height: 300px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.itemtxt-cards{
+	text-align:center;
+	margin: 5%;
+}
+img{
+    height:100%;
+    width:100%;
+}

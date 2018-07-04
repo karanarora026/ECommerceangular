@@ -1,0 +1,31 @@
+<h2> Cart Items</h2>
+<table class="table">
+	<tbody id="cartitems" *ngFor="let product of cartProducts ">
+		<tr>
+			<td>
+				<div class='img-cart'  routerLink="/home/{{product.department}}/{{product.uniqueId}}">
+					
+					<img src='{{product.image}}' alt='image'>
+					
+				</div>
+			</td>
+			<td class='cart-item'   routerLink="/home/{{product.department}}/{{product.uniqueId}}">
+				{{product.name}}
+			</td> 
+			<td class='cart-price cart-item'> 
+				{{product.price}}
+			</td>
+			<td class='cart-item'>
+				<button type='button' class='btn btn-warning deletecart' [id]="uniqueId" (click)="cartDelete(product)">
+					Delete from cart
+				</button>
+			</td>
+		</tr>
+	</tbody>
+	<div *ngIf="cartProducts==[]" >No items in cart </div>
+</table>
+<hr>
+<div class="total-price">
+	Total Price:&nbsp;Rs. <span id="totalPrice">{{ tprice() }}</span>
+	<!-- <div> {{abc | inRupeeFilter}}</div> -->
+</div>

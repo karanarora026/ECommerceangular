@@ -1,0 +1,72 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner image-car">
+		<div class="item active">
+			<img src="./assets/content/car1.jpg" alt="car1">
+		</div>
+
+		<div class="item">
+			<img src="./assets/content/car2.jpg" alt="car2">      
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="cards">
+		<div class="top-card">
+			<span class="heading-card"> Electronics</span>
+			<a routerLink="/home/electronic"><button type="button" class="btn btn-primary btn-lg btn-card" >View All</button></a>
+		</div>
+		<app-products [productType]="'electronic'" [occurance]="'4'"></app-products>
+	</div>
+</div>
+<div class="container">
+	<div class="cards">
+		<div class="top-card">
+			<span class="heading-card"> Fashion</span>
+			<a routerLink="/home/fashion"><button type="button" class="btn btn-primary btn-lg btn-card" id="fashionbutton">View All</button></a>
+		</div>
+	<app-products [productType]="'fashion'" [occurance]="'4'"></app-products>
+	</div>
+</div>
+<div class="advertisement">
+	<img src="./assets/content/adv1.jpg" class="img-responsive">
+</div>
+<div class="container">
+	<div class="cards">
+		<div class="top-card">
+			<span class="heading-card"> Watches</span>
+			<a routerLink="/home/watch"><button type="button" class="btn btn-primary btn-lg btn-card">View All</button></a>
+		</div>
+		<app-products [productType]="'watch'" [occurance]="'4'"></app-products>
+	</div>
+</div>
+<div class="container">
+	<div class="cards">
+		<div class="top-card">
+			<span class="heading-card"> Books</span>
+			<a routerLink="/home/book"><button type="button" class="btn btn-primary btn-lg btn-card">View All</button></a>
+		</div>
+		<app-products [productType]="'book'" [occurance]="'2'"></app-products>
+	</div>
+</div>
+<div class="advertisement">
+	<img src="./assets/content/adv2.jpg" class="img-responsive">
+</div>
+<div class="reviews">
+	<button type="button" class=".btn-default btn-review" data-toggle="collapse" href="#collapse1"> View Reviews </button>
+	<div class="media panel-collapse collapse" id="collapse1">
+		<div class="media-left">
+			<img src="./assets/content/1.jpeg" class="media-object" style="width:60px; height:60px;">
+		</div>
+		<div class="media-body">
+			<h4 class="media-heading"> Bird</h4>
+			<p>This is a sample of ECommerce website.</p>
+		</div>
+	</div>
+</div>

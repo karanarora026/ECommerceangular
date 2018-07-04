@@ -1,0 +1,41 @@
+.product-image{
+	height: 450px;
+    display: block;
+    width: 230px;
+    margin: auto;
+}
+.product-name{
+	    margin-top: 50px;
+    font-size: x-large;
+}
+.product-body{
+	width: 50%;
+}
+.product-price{
+	    color: darkred;
+}
+.product-description{
+	font-size: smaller;
+    margin-top: 20px;
+}
+.product-btn{
+	display: block;
+        width: 40%;
+    margin-top: 100px;
+}
+.product{
+	    height: 200px;
+    width: 150px;
+    margin: 50px;
+}
+
+.suggestion-list{
+	margin-top: 50px;
+    /* display: contents; */
+    margin-left: 150px;
+    margin-right: auto;
+}
+.suggestion-text{
+	    margin-left: 267px;
+
+}

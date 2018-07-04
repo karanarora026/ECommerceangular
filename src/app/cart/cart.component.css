@@ -1,0 +1,22 @@
+.img-cart{
+	height: 120px;
+    width: 75px;
+}
+tr{
+	text-align: center;
+}
+.cart-price{
+	color:darkred;
+}
+.cart-item{
+	padding-top:30px;
+}
+.total-price{
+	    margin-left: 49%;
+    color: darkred;
+    font-weight: 500;
+}
+.img-cart img{
+	    height: 125px;
+    width: 80px;
+}

@@ -1,0 +1,63 @@
+ <div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a routerLink="home"><img class="company-logo" src="../assets/content/gemini.png"></a>
+      </div>
+      <div class="nav navbar-nav navbar-right navbar-cart">
+        <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart <span class="badge">{{cartitems()}}</span></a>
+      </div>
+    </div>
+  </nav>
+  <div class="row middle-page">
+    <div class="col-sm-2 left-bar">
+      <ul class="list-group">
+        <li class="list-group-item"><a routerLink="/home/electronic">Electronics</a></li>
+        <li class="list-group-item"><a routerLink="/home/fashion">Fashion</a></li>
+        <li class="list-group-item"><a routerLink="/home/watch">Watches</a></li>
+        <li class="list-group-item"><a routerLink="/home/book">Books</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="footer row">
+    <div class="col-sm-3">
+      <ul>
+        <li class="footer-heading"> Categories</li>
+        <li>Electronics</li>
+        <li>Fashion</li>
+        <li>Footwear</li>
+        <li>Books</li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <ul>
+        <li class="footer-heading"> Useful Link</li>
+        <li>Contact Us</li>
+        <li>Track Orders</li>
+        <li>Cancellation</li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <ul>
+        <li class="footer-heading">Social Networks</li>
+        <li><a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <ul>
+        <li class="footer-heading"> Features</li>
+        <li> Free Replacement</li>
+        <li> Get Free Home Delivery</li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
