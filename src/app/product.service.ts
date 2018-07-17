@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { Product } from './product';
 import { PRODUCTS } from './mock-products';
 import { Observable, of } from 'rxjs';
+import { throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+
 
 
 @Injectable({
@@ -9,20 +13,17 @@ import { Observable, of } from 'rxjs';
 })
 export class ProductService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getProducts(): Observable<any> {
   return of(PRODUCTS);
 }
 	getProductsByCategory(category): Observable<Product[]>{
-		return of(PRODUCTS[category]);
+		return this.http.get<Product[]>('http://localhost:3000/'+category);
+		// return of(PRODUCTS[category]);
 	}
 	getProductById(category,id): Observable<Product>{
-		// console.log(category);
-		var b = PRODUCTS[category].filter(function (temp) {
-  			return temp.uniqueId == id;
-});
-		return of(b);
+		return this.http.get<Product>('http://localhost:3000/'+category+'/'+id);
 
 	}
 

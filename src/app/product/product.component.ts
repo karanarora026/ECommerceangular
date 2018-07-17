@@ -32,16 +32,16 @@ ngOnInit() {
 					return this.productservice.getProductById(this.productType,this.productId)
 				}
 				)
-			).subscribe(product => {this.product = product[0]
+			).subscribe(product => {
+				this.product = product[0]
+				console.log(this.product);
 				});
-
 		}
 
 	cartAdd(product): void{
-		//console.log(product)
-		if(!this.cartservice.set(product,this.productType)){
-			alert("failed to add");
-		}
+		console.log(product)
+		var a= this.cartservice.set(product,this.productType)
+		console.log("return"+ a)
 		this.clicked=true;
 	}
 
