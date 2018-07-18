@@ -33,7 +33,7 @@ ngOnInit() {
 				}
 				)
 			).subscribe(product => {
-				this.product = product[0]
+				this.product = product;
 				console.log(this.product);
 				});
 		}

@@ -1,6 +1,6 @@
 <div class="row">
 			<div *ngFor="let product of products | async | slice:0:occurance" >
-				<a routerLink="/home/{{productType}}/{{product.uniqueId}}">
+				<a routerLink="/home/{{productType}}/{{product._id}}">
 					<div class='col-sm-6 col-md-3'>
 						<img class='img-card electronics-img' src={{product.image}}>
 						<div class='itemtxt-cards'>

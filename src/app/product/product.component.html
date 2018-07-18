@@ -1,16 +1,17 @@
-<div class="row">
+<div class="row" *ngIf="product.image!=undefined">
 	<div class="col-sm-5">
 		<div class="product-image" id="image">
-			<img [src]="product.image">
+			<img class="center" [src]="product.image">
 		</div>
 	</div>
-	<div class="col-sm-7 product-body" >
-		<div class="product-name" id="name">	
+	<div class="col-sm-7 product-body">
+		<div class="product-name" id="name">
 			{{product.name}}
 		</div>
 		<hr>
 		<div class="product-price">
-			Price: <span id="price">{{product.price}}</span>	
+			Price:
+			<span id="price">{{product.price}}</span>
 		</div>
 		<br>
 		<div class="product-description" id="description">
@@ -18,10 +19,9 @@
 		</div>
 		<button type="button" *ngIf="!clicked" id="cartBtn" [hidden]="clicked" class="btn btn-warning btn-lg product-btn" (click)="cartAdd(product)">Add to Cart</button>
 		<div *ngIf="clicked">
-			<button type="button" id="cartBtn" class="btn btn-success btn-lg product-btn" routerLink="/cart" >Go to Cart</button>
-		<span >Items added to cart </span>
-	</div>
-
+			<button type="button" id="cartBtn" class="btn btn-success btn-lg product-btn" routerLink="/cart">Go to Cart</button>
+			<span>Items added to cart </span>
+		</div>
 	</div>
 </div>
 <!-- 
