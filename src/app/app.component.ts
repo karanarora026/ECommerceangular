@@ -7,17 +7,17 @@ import { CartService} from './cart.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	cartItem: number=5;
+	cartItem: number
 	constructor(private cartservice: CartService){
 	}
 	ngOnInit() {
-		this.cartitems();
-		console.log("now value is"+this.cartItem);
 	}
 
 
-	cartitems(): void{
-		let nmbr: number;
-		this.cartItem=this.cartservice.totalcount()
+	cartitems(): number{
+		// this.cartservice.totalcount().subscribe(number=>{
+		// 	this.cartItem=number;
+		// });
+		return this.cartservice.cartnmbr();
 	}
 }

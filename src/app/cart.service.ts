@@ -11,18 +11,22 @@ import { HttpHeaders } from '@angular/common/http';
 export class CartService {
 
   cartProducts:Cart[]=[];
-  totalItem:number;
+  cartItems:number;
 
   constructor(private http: HttpClient) { } 
 
-   totalcount(): number{        
-    this.http.get<number>('http://localhost:3000/cart/count').subscribe(n=>{
-    this.totalItem=n;
-    return n;
-    });
-    return this.totalItem;
-
+   totalcount(): Observable<number>{        
+    return this.http.get<number>('http://localhost:3000/cart/count');
   };
+
+  cartnmbr(): number{
+    if(this.cartItems == null){
+    this.totalcount().subscribe(number=>{
+			this.cartItems=number;
+    });
+    }
+    return this.cartItems;
+  }
 
   get(): Observable<Cart[]>{
    return this.http.get<Cart[]>('http://localhost:3000/cart');
@@ -30,16 +34,15 @@ export class CartService {
 
   set(product,category): any{  
     let headers =  {headers: new  HttpHeaders({ 'Content-Type': 'application/json'})};
-
-    console.log("InCartService"+product)
+    this.cartItems++;
     let temp={"name":product.name,"price":product.price,"description":product.description,"image":product.image,"Department":category}
-    console.log(temp)
-    return this.http.post('http://localhost:3000/cart/save',temp,headers).subscribe(
-    );
-  };
+    return this.http.post('http://localhost:3000/cart/save',temp,headers).subscribe();
+  };    
+
 
 
   delete(product): Observable<boolean>{
+    this.cartItems--;
     return this.http.delete<boolean>('http://localhost:3000/cart/delete/'+product._id);
     
   };
